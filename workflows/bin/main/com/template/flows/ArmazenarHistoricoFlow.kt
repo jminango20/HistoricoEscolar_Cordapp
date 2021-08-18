@@ -9,7 +9,6 @@ import net.corda.core.contracts.requireThat
 import net.corda.core.flows.FinalityFlow
 import net.corda.core.flows.FlowLogic
 import net.corda.core.flows.InitiatingFlow
-import net.corda.core.flows.StartableByRPC
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 
@@ -18,7 +17,6 @@ import net.corda.core.transactions.TransactionBuilder
 object ArmazenarHistoricoFlow {
 
     @InitiatingFlow
-    @StartableByRPC
     class ReqFlow(val historicoEscolar: HistoricoEscolar) : FlowLogic<SignedTransaction>(){
         @Suspendable
         override fun call(): SignedTransaction {
